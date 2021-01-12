@@ -1,4 +1,4 @@
-#!/home/rodriguesms/Hubic/Funny_things/avocado_analytics/venv/bin/python
+#!/home/rodriguesms/Hubic/Funny_things/avocado_analytics/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

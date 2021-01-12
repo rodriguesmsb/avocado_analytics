@@ -16,14 +16,25 @@ body {
     text-align: center;
 }
 
-.header-description {
+.description {
     color: #969696;
     margin: 4px auto;
     text-align: center;
     max-width: 384px;
 }
 
-.header-emoji {
+.footer{
+    background-color: #222222;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.emoji {
     font-size: 48px;
     margin: 0 auto;
     text-align: center;
@@ -75,67 +86,3 @@ body {
     color: #079A82;
 }
 
-
-
-
-
-                html.Div(
-                    children = [
-                        html.Div(children="Region", className = "menu-title"),
-                        
-                    ],
-            
-                ),
-                #Create a dropdown to select type
-                html.Div(
-                    children=[
-                        html.Div,
-                        dcc.Dropdown(
-                            id = "type-filter",
-                            options = [
-                                {"label": avocado_type, "value": avocado_type}
-                                for avocado_type in data.type.unique()
-                            ],
-                            value="organic",
-                            clearable = False,
-                            searchable = False,
-                            className = "dropdown",
-                        ),
-                    ],
-                ),
-                #Create a dropdow to select date
-                html.Div(
-                    children=[
-                        
-                        dcc.DatePickerRange(
-                            id="date-range",
-                            min_date_allowed=data.Date.min().date(),
-                            max_date_allowed=data.Date.max().date(),
-                            start_date=data.Date.min().date(),
-                            end_date=data.Date.max().date(),
-                        ),
-                    ]
-                ),
-
-                    ],
-                    className = "menu",
-            ),
-
- #Create a graph for avocado price
-        html.Div(
-            children = [
-                html.Div(
-                    children = dcc.Graph(
-                        id = "price-chart", config = {"displayModeBar": False},
-                    ),
-                    className = "card",
-                ),
-                html.Div(
-                    children = dcc.Graph(
-                        id = "volume-chart", config = {"displayModeBar": False},
-                    ),
-                    className = "card",
-                )
-            ],
-            className = "wrapper",
-        ),

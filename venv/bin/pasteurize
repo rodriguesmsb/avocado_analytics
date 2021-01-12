@@ -1,4 +1,4 @@
-#!/home/rodriguesms/Hubic/Funny_things/avocado_analytics/venv/bin/python
+#!/home/rodriguesms/Hubic/Funny_things/avocado_analytics/venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'future==0.18.2','console_scripts','pasteurize'
 __requires__ = 'future==0.18.2'
 import re
