@@ -1,16 +1,20 @@
 body {
     font-family: "Lato", sans-serif;
     margin: 0;
-    background-color: #F7F7F7;
+    background-color: #d9d9d9;
 }
 
+.header {
+    background-color: #222222;
+    height: 288px;
+    padding: 16px 0 0 0;
+}
 
 .header-title{
     font-size: 48px;
     color: #74c476;
     text-align: center;
 }
-
 
 .header-description {
     color: #969696;
@@ -33,7 +37,6 @@ body {
     margin-top: 32px;
 }
 .dropdown {
-    background-color: #74c476;
     color:black;
 }
 
@@ -48,8 +51,8 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding-top: 24px;
-    margin: 0 auto 0 auto;
-    background-color: #bae4b3;
+    margin: -40px auto 0 auto;
+    background-color: #f7f7f7;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
 }
 
@@ -71,3 +74,68 @@ body {
     font-weight: bold;
     color: #079A82;
 }
+
+
+
+
+
+                html.Div(
+                    children = [
+                        html.Div(children="Region", className = "menu-title"),
+                        
+                    ],
+            
+                ),
+                #Create a dropdown to select type
+                html.Div(
+                    children=[
+                        html.Div,
+                        dcc.Dropdown(
+                            id = "type-filter",
+                            options = [
+                                {"label": avocado_type, "value": avocado_type}
+                                for avocado_type in data.type.unique()
+                            ],
+                            value="organic",
+                            clearable = False,
+                            searchable = False,
+                            className = "dropdown",
+                        ),
+                    ],
+                ),
+                #Create a dropdow to select date
+                html.Div(
+                    children=[
+                        
+                        dcc.DatePickerRange(
+                            id="date-range",
+                            min_date_allowed=data.Date.min().date(),
+                            max_date_allowed=data.Date.max().date(),
+                            start_date=data.Date.min().date(),
+                            end_date=data.Date.max().date(),
+                        ),
+                    ]
+                ),
+
+                    ],
+                    className = "menu",
+            ),
+
+ #Create a graph for avocado price
+        html.Div(
+            children = [
+                html.Div(
+                    children = dcc.Graph(
+                        id = "price-chart", config = {"displayModeBar": False},
+                    ),
+                    className = "card",
+                ),
+                html.Div(
+                    children = dcc.Graph(
+                        id = "volume-chart", config = {"displayModeBar": False},
+                    ),
+                    className = "card",
+                )
+            ],
+            className = "wrapper",
+        ),
