@@ -1,1 +1,1 @@
-# Mult page dash app for Avocado Analytics
+# Multi page dash app for Avocado Analytics
