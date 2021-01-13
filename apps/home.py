@@ -1,5 +1,6 @@
 import dash_core_components as dcc  
 import dash_html_components as html
+import dash_bootstrap_components as dbc
 import base64
 
 
@@ -31,6 +32,17 @@ layout = (
             ],
             className = "header"
         ),
+            html.Div(children = [
+                dbc.NavbarSimple(
+                    children = [
+                        dbc.NavItem(dbc.NavLink("Home", href = "/apps/app1"))
+                    ],
+                )
+            ],
+            
+                
+            
+            ),
             html.Div(children = [
                 html.P("Because we all love AVOCADOS!", className = "description"),
                 html.Img(src = encode_image(path_to_image))

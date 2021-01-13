@@ -31,7 +31,7 @@ app.layout = html.Div([
               Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/apps/app1':
-        pass
+        return 404
     else:
         return home.layout
 
