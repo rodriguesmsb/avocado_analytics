@@ -5,6 +5,8 @@ import base64
 
 
 path_to_image = "assets/heart.png"
+path_to_home =  "assets/home.png"
+
 def encode_image(image_file):
     ''' 
     Function to encode a image in a format that allows its plot on html.Fig
@@ -33,26 +35,35 @@ layout = (
             className = "header"
         ),
             html.Div(children = [
-                dbc.NavbarSimple(
+                dbc.Nav(
                     children = [
-                        dbc.NavItem(dbc.NavLink("Home", href = "/apps/app1"))
+
+
+                        dbc.NavLink(
+                            
+                            html.Img(src = encode_image(path_to_home), className = "menu-icon"),
+                            href = "/apps/home"),
+
+                        dbc.NavLink("Sales-price", href = "#"),
+
+                        dbc.NavLink("Avocados sold", href = "#"),
+
+                        dbc.NavLink("Price prediction", href = "#")
+
                     ],
+
                 )
             ],
-            
-                
+            className = "menu-bar"
             
             ),
+            
             html.Div(children = [
                 html.P("Because we all love AVOCADOS!", className = "description"),
                 html.Img(src = encode_image(path_to_image))
             
         ],
-            className = "footer"
-
-
-    ),
-    ],
-
+            className = "footer"),
+        ],
     )
 )

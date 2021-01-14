@@ -32,7 +32,19 @@ body {
     text-align: center;
 }
 
+.menu-icon{
+    width:15%;
+    height:100%;
+}
 
+.menu-bar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: -40px auto 0 auto;
+    background-color: #f7f7f7;
+}
 
 .emoji {
     font-size: 48px;
