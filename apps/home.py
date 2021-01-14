@@ -1,11 +1,11 @@
 import dash_core_components as dcc  
 import dash_html_components as html
-import dash_bootstrap_components as dbc
 import base64
 
+from components import nav_bar
 
 path_to_image = "assets/heart.png"
-path_to_home =  "assets/home.png"
+
 
 def encode_image(image_file):
     ''' 
@@ -15,55 +15,35 @@ def encode_image(image_file):
     return "data:image/jpeg;base64,{}".format(encode.decode())
 
 
-layout = (
-    html.Div(
-        children = [
-            #   Create a div element to hold header
-            html.Div(
-                children = [
-                    html.P(children = "🥑", className = "emoji"),
-                    html.H1(children = "Avocado Analytics",
-                    className = "header-title"),
-                    html.P(
-                    children = "A web page dedicated to analyze"
-                    " the behavior of avocado prices in US"
-                    " between 2015 and 2018",
-                    className = "description"
-                    ),
-                    
-            ],
-            className = "header"
-        ),
-            html.Div(children = [
-                dbc.Nav(
+
+
+layout = html.Div(
+            children = [
+                #   Create a div element to hold header
+                html.Div(
                     children = [
-
-
-                        dbc.NavLink(
-                            
-                            html.Img(src = encode_image(path_to_home), className = "menu-icon"),
-                            href = "/apps/home"),
-
-                        dbc.NavLink("Sales-price", href = "#"),
-
-                        dbc.NavLink("Avocados sold", href = "#"),
-
-                        dbc.NavLink("Price prediction", href = "#")
-
-                    ],
-
-                )
-            ],
-            className = "menu-bar"
-            
+                        html.P(children = "🥑", className = "emoji"),
+                        html.H1(children = "Avocado Analytics",
+                        className = "header-title"),
+                        html.P(
+                        children = "A web page dedicated to analyze"
+                        " the behavior of avocado prices in US"
+                        " between 2015 and 2018",
+                        className = "description"
+                        ),
+                    
+                ],
+                className = "header"
             ),
+                #Add a div with navbar over here
+                nav_bar.navBar,
+    
+                html.Div(children = [
+                    html.P("Because we all love AVOCADOS!", className = "description"),
+                    html.Img(src = encode_image(path_to_image))
             
-            html.Div(children = [
-                html.P("Because we all love AVOCADOS!", className = "description"),
-                html.Img(src = encode_image(path_to_image))
-            
-        ],
-            className = "footer"),
-        ],
+            ],
+                className = "footer"),
+            ],
     )
-)
+

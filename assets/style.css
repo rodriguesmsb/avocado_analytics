@@ -46,6 +46,23 @@ body {
     background-color: #f7f7f7;
 }
 
+.row{
+    width: 12;
+    height: 50px;
+    display: flex;
+    background-color: purple;
+    margin-top: 0;
+    justify-content: space-evenly;
+}
+
+.col{
+    width: 10%;
+    height: 100%;
+    background-color: green;
+    
+
+}
+
 .emoji {
     font-size: 48px;
     margin: 0 auto;

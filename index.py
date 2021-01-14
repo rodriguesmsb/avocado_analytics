@@ -2,7 +2,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-
+import dash_bootstrap_components as dbc
 from app import app
 from apps import home
 
@@ -17,7 +17,7 @@ external_stylesheets = [
 
 
 ###Create a instance of Dash class
-app = dash.Dash(__name__, external_stylesheets = external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets = [external_stylesheets])
 app.title = "Avocado Analytics: Understand Your Avocados!"
 
 app.layout = html.Div([
@@ -31,6 +31,8 @@ app.layout = html.Div([
               Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == "/apps/home":
+        return home.layout
+    else:
         return home.layout
 
 
