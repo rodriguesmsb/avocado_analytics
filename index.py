@@ -27,13 +27,26 @@ app.layout = html.Div([
 
 
 @app.callback(Output('page-content', 'children'),
-
               Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == "/apps/home":
         return home.layout
     else:
         return home.layout
+
+
+@app.callback(Output('image', 'children'),
+              [Input('interval', 'n_intervals')])
+def display_image(n):
+    if n == None or n % 3 == 1:
+        img = html.Img(src="http://placeimg.com/625/225/any")
+    elif n % 3 == 2:
+        img = html.Img(src="http://placeimg.com/625/225/animals")
+    elif n % 3 == 0:
+        img = html.Img(src="http://placeimg.com/625/225/arch")
+    else:
+        img = "None"
+    return img
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ body {
 
 .header {
     background-color: #222222;
-    height: 288px;
+    height: 150px;
     padding: 16px 0 0 0;
 }
 
@@ -14,6 +14,7 @@ body {
     font-size: 48px;
     color: #74c476;
     text-align: center;
+    margin-top: -5px;
 }
 
 .description {
@@ -21,6 +22,15 @@ body {
     margin: 4px auto;
     text-align: center;
     max-width: 384px;
+    margin-top: -25px;
+}
+
+.description_footer {
+    color: #969696;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 384px;
+    margin-top: -10px;
 }
 
 .footer{
@@ -43,14 +53,27 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin: -40px auto 0 auto;
-    background-color: #f7f7f7;
+    background-color: #d9d9d9;
 }
 
 .row{
     width: 12;
     height: 50px;
     display: flex;
-    background-color: purple;
+    margin-top: 0;
+    background-color: #f0f0f0;
+    justify-content: space-evenly;
+}
+
+.img{
+    width: 10%;
+    height: 10%;
+}
+
+.section{
+    width: 12;
+    height: 300;
+    display: flex;
     margin-top: 0;
     justify-content: space-evenly;
 }
@@ -58,9 +81,6 @@ body {
 .col{
     width: 10%;
     height: 100%;
-    background-color: green;
-    
-
 }
 
 .emoji {

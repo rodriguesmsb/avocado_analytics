@@ -17,10 +17,10 @@ def encode_image(image_file):
 
 
 
-layout = html.Div(
+layout = html.Div(id = "main_body",
             children = [
                 #   Create a div element to hold header
-                html.Div(
+                html.Div(id = "header",
                     children = [
                         html.P(children = "🥑", className = "emoji"),
                         html.H1(children = "Avocado Analytics",
@@ -37,10 +37,25 @@ layout = html.Div(
             ),
                 #Add a div with navbar over here
                 nav_bar.navBar,
+
+                html.Section(id = "slideshow",
+                             children = [
+                                 html.Div(id = "slideshow-container", 
+                                          children = [
+                                              #try to fix this next time
+                                              html.Div(id = "image"),
+                                              dcc.Interval(id = 'interval', interval = 3000)
+                                            ])
+                            ],
+                            className = "section"
+                            
+                            ),
     
-                html.Div(children = [
-                    html.P("Because we all love AVOCADOS!", className = "description"),
-                    html.Img(src = encode_image(path_to_image))
+                html.Div(id = "footer_body",
+                        children = [
+                            html.Img(src = encode_image(path_to_image)),
+                            html.P("Because we all love AVOCADOS!", className = "description_footer")
+                            
             
             ],
                 className = "footer"),
