@@ -1,22 +1,30 @@
-import dash_bootstrap_components as dbc
+import dash_core_components as dcc
 import dash_html_components as html
-import base64
+
+from components.aux_func import encode_image
 
 path_to_home =  "assets/home.png"
 
 
-def encode_image(image_file):
-    ''' 
-    Function to encode a image in a format that allows its plot on html.Fig
-    '''
-    encode = base64.b64encode(open(image_file, "rb").read())
-    return "data:image/jpeg;base64,{}".format(encode.decode())
 
 navBar = html.Div(
         children = [
+            html.Div(
+                children = [
+                    dcc.Link(id = "home",
+                             children = html.Img(src = encode_image(path_to_home), style = {"height": "93%"}),
+                             href = "/")
+                ], className = "col"),
+            html.Div(
+                children = [
+                    dcc.Link(id = "prices",
+                    children = html.P("PRICE HISTORY"),
+                    href = "/prices",
+                    className = "link-text"
+                    )
+                ], 
+                className = "col"),
             html.Div(className = "col"),
-            html.Div(className = "col"),
-            html.Div(className = "col")
             ],
         className = "row"
     )

@@ -1,13 +1,22 @@
-body {
-    font-family: "Lato", sans-serif;
-    margin: 0;
-    background-color: #d9d9d9;
-}
-
 .header {
     background-color: #222222;
     height: 150px;
     padding: 16px 0 0 0;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.footer{
+    background-color: #222222;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .header-title{
@@ -33,14 +42,6 @@ body {
     margin-top: -10px;
 }
 
-.footer{
-    background-color: #222222;
-    height: 150px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
 
 .menu-icon{
     width:15%;
@@ -53,7 +54,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin: -40px auto 0 auto;
-    background-color: #d9d9d9;
+    background-color: #d9d9d9; 
 }
 
 .row{
@@ -61,8 +62,8 @@ body {
     height: 50px;
     display: flex;
     margin-top: 0;
-    background-color: #f0f0f0;
-    justify-content: space-evenly;
+    background-color: #d9d9d9;
+    justify-content: left;
 }
 
 .img{
@@ -79,8 +80,17 @@ body {
 }
 
 .col{
-    width: 10%;
+    width: 8.33%;
     height: 100%;
+    text-align: center;
+}
+
+.link-text{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    font-family:"Roboto Condensed", sans-serif;
 }
 
 .emoji {

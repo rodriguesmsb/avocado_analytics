@@ -30,18 +30,7 @@ layout = html.Div(
         #Add a div with navbar over here
         nav_bar.navBar,
 
-        html.Section(id = "slideshow",
-                        children = [
-                            html.Div(id = "slideshow-container", 
-                                    children = [
-                                        #try to fix this next time
-                                        html.Div(id = "image"),
-                                        dcc.Interval(id = 'interval', interval = 3000)
-                                    ])
-                    ],
-                    className = "section"
-                            
-                            ),
+        #Add graph here
     
         html.Div(id = "footer_body",
                 children = [
@@ -53,4 +42,5 @@ layout = html.Div(
         className = "footer"),
     ],
 )
+
 
