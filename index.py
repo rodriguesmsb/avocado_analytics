@@ -35,19 +35,19 @@ def display_page(pathname):
 
 
 
-@app.callback(Output('image', 'children'),
-              #changed here to list
-              [Input('interval', 'n_intervals')])
-def display_image(n):
-    if n == None or n % 3 == 1:
-        img = html.Img(src="http://placeimg.com/625/225/any")
-    elif n % 3 == 2:
-        img = html.Img(src="http://placeimg.com/625/225/animals")
-    elif n % 3 == 0:
-        img = html.Img(src="http://placeimg.com/625/225/arch")
-    else:
-        img = "None"
-    return img
+# @app.callback(Output('image', 'children'),
+#               #changed here to list
+#               [Input('interval', 'n_intervals')])
+# def display_image(n):
+#     if n == None or n % 3 == 1:
+#         img = html.Img(src="http://placeimg.com/625/225/any")
+#     elif n % 3 == 2:
+#         img = html.Img(src="http://placeimg.com/625/225/animals")
+#     elif n % 3 == 0:
+#         img = html.Img(src="http://placeimg.com/625/225/arch")
+#     else:
+#         img = "None"
+#     return img
 
 
 if __name__ == '__main__':

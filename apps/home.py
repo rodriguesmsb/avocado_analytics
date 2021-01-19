@@ -6,6 +6,9 @@ from components.aux_func import encode_image
 
 path_to_image = "assets/heart.png"
 path_to_avocado = "assets/favicon.ico"
+avocado = "assets/avocado.png"
+real_python = "assets/real_python.png"
+dash_logo = "assets/dash_logo.png"
 
 
 layout = html.Div(
@@ -30,17 +33,38 @@ layout = html.Div(
         #Add a div with navbar over here
         nav_bar.navBar,
 
-        html.Section(id = "slideshow",
+        html.Section(id = "figures",
                         children = [
-                            html.Div(id = "slideshow-container", 
-                                    children = [
-                                        #try to fix this next time
-                                        html.Div(id = "image"),
-                                        dcc.Interval(id = 'interval', interval = 3000)
-                                    ])
+                            html.Div(
+                                children = [
+                                    html.A(
+                                        html.Img(src = encode_image(avocado), className = "figure"),
+                                        href = "https://en.wikipedia.org/wiki/Avocado"
+                                    ),
+                                    html.P("About Avocados!", className = "home-text")
+                                ],
+                            ),
+                            html.Div(
+                                children = [
+                                    html.A(
+                                        html.Img(src = encode_image(real_python), className = "figure"),
+                                         href = "https://realpython.com/python-dash/"
+                                    ),
+                                    html.P("Inspired by!", className = "home-text")
+                                ]
+                                
+                            ),
+                            html.Div(
+                                children = [
+                                    html.A(
+                                        html.Img(src = encode_image(dash_logo), className = "figure"),
+                                        href = "https://dash.plotly.com/"
+                                    ),
+                                    html.P("Created using!", className = "home-text")
+                                ]
+                            )       
                     ],
                     className = "section"
-                            
                             ),
     
         html.Div(id = "footer_body",
