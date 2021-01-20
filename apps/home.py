@@ -37,30 +37,32 @@ layout = html.Div(
                         children = [
                             html.Div(
                                 children = [
+                                    html.P("About Avocados!", className = "home-text"),
                                     html.A(
                                         html.Img(src = encode_image(avocado), className = "figure"),
                                         href = "https://en.wikipedia.org/wiki/Avocado"
-                                    ),
-                                    html.P("About Avocados!", className = "home-text")
+                                    )
                                 ],
                             ),
                             html.Div(
                                 children = [
+                                    html.P("Inspired by!", className = "home-text"),
                                     html.A(
                                         html.Img(src = encode_image(real_python), className = "figure"),
                                          href = "https://realpython.com/python-dash/"
                                     ),
-                                    html.P("Inspired by!", className = "home-text")
+                                    
                                 ]
                                 
                             ),
                             html.Div(
                                 children = [
+                                    html.P("Created using!", className = "home-text"),
                                     html.A(
                                         html.Img(src = encode_image(dash_logo), className = "figure"),
                                         href = "https://dash.plotly.com/"
                                     ),
-                                    html.P("Created using!", className = "home-text")
+                                    
                                 ]
                             )       
                     ],

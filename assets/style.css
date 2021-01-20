@@ -15,6 +15,12 @@ body {
     text-align: center;
 }
 
+.two-col{
+    width: 16.66%;
+    height: 100%;
+    text-align: center;
+}
+
 .description {
     color: #969696;
     margin: 4px auto;
@@ -70,7 +76,7 @@ body {
 }
 
 .home-text{
-    color: black;
+    color: #006d2c;
     text-decoration: none;
     font-weight: bold;
     font-size: 30px;

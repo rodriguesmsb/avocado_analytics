@@ -24,7 +24,14 @@ navBar = html.Div(
                     )
                 ], 
                 className = "col"),
-            html.Div(className = "col"),
+            html.Div(
+                children = [
+                    dcc.Link(id = "ml",
+                    children = html.P("PRICE PREDICTION"),
+                    href = "/prediction",
+                    className = "link-text")
+                ], 
+                className = "two-col"),
             ],
         className = "row"
     )

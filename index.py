@@ -3,7 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 from app import app
-from apps import home, price
+from apps import home, price, prediction
 
 ###Add code to use external css
 external_stylesheets = [
@@ -30,6 +30,8 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == "/prices":
         return price.layout
+    elif pathname == "/prediction":
+        return prediction.layout
     else:
         return home.layout
 
