@@ -8,10 +8,14 @@ import pandas as pd
 import numpy as np
 
 
-###Read data that will be use
+###Read data that will be used
 data = pd.read_csv("data/avocado.csv")
 data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
+path_to_image = "assets/heart.png"
+path_to_avocado = "assets/favicon.ico"
+
+
 
 
 ###Add code to use external css
@@ -85,6 +89,6 @@ def update_charts(region, avocado_type, start_date, end_date):
     return price_chart_figure
 
 if __name__ == '__main__':
-    app.run_server(debug = True)
+    app.run_server()
 import pandas as pd
 import numpy as np
