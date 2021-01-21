@@ -98,7 +98,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin: -40px auto 0 auto;
+    margin: -140px auto 0 auto;
     background-color: #d9d9d9; 
 }
 
@@ -108,7 +108,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     padding-top: 24px;
-    margin: -40px auto 0 auto;
+    margin: auto auto 0 auto;
     background-color: #f7f7f7;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
 }
