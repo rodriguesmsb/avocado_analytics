@@ -4,6 +4,15 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 from app import app
 from apps import home, price, prediction
+import pandas as pd
+import numpy as np
+
+
+###Read data that will be use
+data = pd.read_csv("data/avocado.csv")
+data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
+data.sort_values("Date", inplace=True)
+
 
 ###Add code to use external css
 external_stylesheets = [
@@ -22,9 +31,10 @@ app.title = "Avocado Analytics: Understand Your Avocados!"
 app.layout = html.Div([
     dcc.Location(id = 'url', refresh = False),
     html.Div(id = 'page-content')
+
 ])
 
-
+#define all calllbakc that will be used
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
@@ -36,21 +46,45 @@ def display_page(pathname):
         return home.layout
 
 
-
-# @app.callback(Output('image', 'children'),
-#               #changed here to list
-#               [Input('interval', 'n_intervals')])
-# def display_image(n):
-#     if n == None or n % 3 == 1:
-#         img = html.Img(src="http://placeimg.com/625/225/any")
-#     elif n % 3 == 2:
-#         img = html.Img(src="http://placeimg.com/625/225/animals")
-#     elif n % 3 == 0:
-#         img = html.Img(src="http://placeimg.com/625/225/arch")
-#     else:
-#         img = "None"
-#     return img
-
+@app.callback(Output("price-chart", "figure"),
+    [
+        Input("region-filter", "value"),
+        Input("type-filter", "value"),
+        Input("date-range", "start_date"),
+        Input("date-range", "end_date"),
+    ],
+)
+def update_charts(region, avocado_type, start_date, end_date):
+    mask = (
+        (data.region == region)
+        & (data.type == avocado_type)
+        & (data.Date >= start_date)
+        & (data.Date <= end_date)
+    )
+    filtered_data = data.loc[mask, :]
+    price_chart_figure = {
+        "data": [
+            {
+                "x": filtered_data["Date"],
+                "y": filtered_data["AveragePrice"],
+                "type": "lines",
+                "hovertemplate": "$%{y:.2f}<extra></extra>",
+            },
+        ],
+        "layout": {
+            "title": {
+                "text": "Average Price of Avocados",
+                "x": 0.05,
+                "xanchor": "left",
+            },
+            "xaxis": {"fixedrange": True},
+            "yaxis": {"tickprefix": "$", "fixedrange": True},
+            "colorway": ["#17B897"],
+        },
+    }
+    return price_chart_figure
 
 if __name__ == '__main__':
     app.run_server(debug = True)
+import pandas as pd
+import numpy as np

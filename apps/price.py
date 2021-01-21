@@ -1,17 +1,17 @@
 import dash_core_components as dcc  
 import dash_html_components as html
+from components import nav_bar
+from components.aux_func import encode_image
 import pandas as pd
 import numpy as np
 
-from components import nav_bar
-from components.aux_func import encode_image
 
-path_to_image = "assets/heart.png"
-path_to_avocado = "assets/favicon.ico"
-
+###Read data that will be use
 data = pd.read_csv("data/avocado.csv")
 data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
+path_to_image = "assets/heart.png"
+path_to_avocado = "assets/favicon.ico"
 
 
 layout = html.Div(
@@ -90,8 +90,17 @@ layout = html.Div(
         ),
 
         #Add graph here
+        html.Div(
+            children = [
+                dcc.Graph(
+                    id = "price-chart",
+                    config = {"displayModeBar": False},
+                )
 
-    
+            ],
+            className = "card"
+        ),
+
         html.Div(id = "footer_body",
                 children = [
                     html.Img(src = encode_image(path_to_image)),
@@ -102,5 +111,3 @@ layout = html.Div(
         className = "footer"),
     ],
 )
-
-
