@@ -9,6 +9,7 @@ path_to_avocado = "assets/favicon.ico"
 avocado = "assets/avocado.png"
 real_python = "assets/real_python.png"
 dash_logo = "assets/dash_logo.png"
+ico_logo = "assets/flaticon.png"
 
 
 layout = html.Div(
@@ -63,6 +64,18 @@ layout = html.Div(
                                         href = "https://dash.plotly.com/"
                                     ),
                                     
+                                ]
+                            ),
+                            html.Div(
+                                children = [
+                                    html.P("Icons", className = "home-text"),
+                                    html.A(
+                                        html.Img(src = encode_image(ico_logo), className = "figure"),
+                                        href = "https://www.flaticon.com/"
+
+                                    )
+                                    
+
                                 ]
                             )       
                     ],
