@@ -11,3 +11,35 @@ real_python = "assets/real_python.png"
 dash_logo = "assets/dash_logo.png"
 ico_logo = "assets/flaticon.png"
 
+
+
+layout = html.Div(
+    children = [
+        #create header
+        html.Div(
+            children = ["header"],
+            className = "header"
+        ),
+
+        #create nav bar
+        html.Div(
+            children = ["navbar"],
+            className = "nav-bar"
+        ),
+
+        #create body
+        html.Div(
+            children = ["main body"],
+            className = "body"
+        ),
+
+        #create footer
+        html.Div(
+            children = ["footer"],
+            className = "footer"
+        )
+
+    ],
+    className = "main"
+
+)

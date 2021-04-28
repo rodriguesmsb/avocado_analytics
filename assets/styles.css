@@ -1,0 +1,27 @@
+.main{
+    display: grid;
+    grid-template-rows: 1fr auto auto 1fr;
+    height: 100vh;
+}
+
+
+.header{
+    display: grid;
+    background-color: #222222;
+}
+
+.nav-bar{
+    display: grid;
+    background-color:  #d9d9d9;
+
+}
+
+.body{
+    display: grid;
+    background-color:  #f0f0f0;
+}
+
+.footer{
+    display: grid;
+    background-color:   #222222;
+}
