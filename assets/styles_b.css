@@ -1,0 +1,168 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card {
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.col{
+    width: 8.33%;
+    height: 100%;
+    text-align: center;
+}
+
+.two-col{
+    width: 16.66%;
+    height: 100%;
+    text-align: center;
+}
+
+.description {
+    color: #969696;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 384px;
+    margin-top: -25px;
+}
+
+.description_footer {
+    color: #969696;
+    margin: 4px auto;
+    text-align: center;
+    max-width: 384px;
+    margin-top: -10px;
+}
+
+.dropdown {
+    color:black;
+}
+
+.emoji {
+    font-size: 48px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.figure{
+    width: 400px;
+    height: 400px;
+    display: flex;
+}
+
+.footer{
+    background-color: #222222;
+    height: 150px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    background-color: #222222;
+    height: 150px;
+    padding: 16px 0 0 0;
+}
+
+.header-title{
+    font-size: 48px;
+    color: #74c476;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.home-text{
+    color: #006d2c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:"Roboto Condensed", sans-serif;
+    text-align: center;
+}
+
+.link-text{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    font-family:"Roboto Condensed", sans-serif;
+    text-align: center;
+}
+
+.menu-bar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: -140px auto 0 auto;
+    background-color: #d9d9d9; 
+}
+
+.menu {
+    height: 112px;
+    width: 912px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+
+    margin: auto auto 0 auto;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.menu-icon{
+    width:15%;
+    height:100%;
+}
+
+.menu-title {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #079A82;
+}
+
+.row{
+    width: 12;
+    height: 50px;
+    display: flex;
+    margin-top: 0;
+    background-color: #d9d9d9;
+    justify-content: left;
+}
+
+.section{
+    width: 12;
+    height: 300;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+
+}
+
+.Select-control {
+    width: 256px;
+    height: 48px;
+}
+
+.Select--multi .Select-value-label {
+    line-height: 32px;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    line-height: 48px;
+}
+
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1024px;
+    padding-right: 10px;
+
+    padding-left: 10px;
+    margin-top: 32px;
+}
+
