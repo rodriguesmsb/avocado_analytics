@@ -17,7 +17,24 @@ layout = html.Div(
     children = [
         #create header
         html.Div(
-            children = ["header"],
+            children = [
+                html.Div(
+                    children = [
+                        html.P(children="🥑", className = "header-emoji"),
+                        html.H1(
+                            children = ["Avocado Analytics"],
+                            className = "title-h1"
+                        ),
+                        html.P(
+                            children = "Analyze the behavior of avocado prices"
+                            " and the number of avocados sold in the US"
+                            " between 2015 and 2018",
+                            className = "title-p"                 
+        ),
+                    ],
+                    className = "title"
+                )
+            ],
             className = "header"
         ),
 
