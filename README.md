@@ -3,5 +3,5 @@
 
 ## Description
 
-This repo contains as dashboard constructed with dash for the sales of avocado in the USA. The data cames from [Kaggle](https://www.kaggle.com/neuromusic/avocado-prices).
+This repo contains a dashboard constructed with dash for the sales of avocado in the USA. The data cames from [Kaggle](https://www.kaggle.com/neuromusic/avocado-prices).
 
