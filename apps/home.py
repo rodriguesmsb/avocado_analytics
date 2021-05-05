@@ -4,7 +4,8 @@ import dash_html_components as html
 from components import nav_bar
 from components.aux_func import encode_image
 
-path_to_image = "assets/heart.png"
+path_to_heart = "assets/heart.png"
+path_to_home = "assets/home.png"
 path_to_avocado = "assets/favicon.ico"
 avocado = "assets/avocado.png"
 real_python = "assets/real_python.png"
@@ -40,7 +41,14 @@ layout = html.Div(
 
         #create nav bar
         html.Div(
-            children = ["navbar"],
+            children = [
+                dcc.Link(html.Img(
+                    src = encode_image(path_to_home),
+                    className = "img-home"),
+                    href = "/"),
+                html.A("Price History", href = "/prices", className = "nav-prices"),
+                html.A("Predictions", href = "/prediction", className = "nav-prediction"),
+            ],
             className = "nav-bar"
         ),
 
