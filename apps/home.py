@@ -60,7 +60,12 @@ layout = html.Div(
 
         #create footer
         html.Div(
-            children = ["footer"],
+            children = [
+                html.Img(
+                    src = encode_image(path_to_heart),
+                    className = "img-heart"),
+                html.P("Because we all love avocados",
+                    className = "footer-text")],
             className = "footer"
         )
 

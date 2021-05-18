@@ -78,6 +78,13 @@
     height: 35px;
 }
 
+.img-heart{
+    display: grid;
+    grid-column: 6 /span 1;
+    margin-left: 15px;
+}
+
+
 
 .body{
     display: grid;
@@ -86,5 +93,13 @@
 
 .footer{
     display: grid;
+    grid-template-columns: repeat(12,1fr);
     background-color:   #222222;
+}
+
+.footer-text{
+    grid-column: 6 /span 1;
+    display: block;
+    color: white;
+    text-align: center;
 }
