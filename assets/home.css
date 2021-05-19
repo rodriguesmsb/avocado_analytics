@@ -1,7 +1,7 @@
 .main{
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    height: 100vh;
+    height: 98vh;
 }
 
 .header{
@@ -82,6 +82,7 @@
     display: grid;
     grid-column: 6 /span 1;
     margin-left: 15px;
+    
 }
 
 
@@ -96,6 +97,7 @@
     display: grid;
     grid-template-columns: repeat(12,1fr);
     background-color:   #222222;
+    margin-bottom: -20px;
 }
 
 .footer-text{
