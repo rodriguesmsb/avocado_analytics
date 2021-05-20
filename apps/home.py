@@ -54,7 +54,19 @@ layout = html.Div(
 
         #create body
         html.Div(
-            children = ["main body"],
+            children = [
+                html.Div(
+                    children = [
+                        html.Img(
+                            src = encode_image(avocado)),
+                        html.A("About avocados",
+                            href = "https://en.wikipedia.org/wiki/Avocado",
+                            className = "text-body"
+                        )
+                    ],
+                    className = "b1"
+                ),
+            ],
             className = "body"
         ),
 
