@@ -62,9 +62,20 @@ layout = html.Div(
                         html.A("About avocados",
                             href = "https://en.wikipedia.org/wiki/Avocado",
                             className = "text-body"
-                        )
+                        ),
                     ],
                     className = "b1"
+                ),
+                html.Div(
+                    children = [
+                        html.Img(
+                            src = encode_image(dash_logo)),
+                        html.A("Powered by!",
+                            href = "https://dash.plotly.com/",
+                            className = "text-body"
+                        ),
+                    ],
+                    className = "b2"
                 ),
             ],
             className = "body"

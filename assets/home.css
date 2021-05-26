@@ -98,6 +98,13 @@
     grid-column: 1 /span 1;
 }
 
+.b2{
+    display: grid;
+    align-content: center;
+    margin-top: 80px;
+    grid-column: 2 /span 1;
+}
+
 .text-body{
     color: black;
     font-family:"Roboto Condensed", sans-serif;
